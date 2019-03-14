@@ -6,7 +6,7 @@ const MenuTree = props => {
     return (
         <li className='treeview'>
             <a>
-                <i className={icon}></i> {label}
+                <i className={icon}></i> <span>{label}</span>
                 <i className='fa fa-angle-left pull-right'></i>
             </a>
             <ul className='treeview-menu'>

@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const MenuItem = props => {
     const { path, icon, label } = props;
     return (
         <li className=''>
-            <a href={path}>
-                <i className={icon}></i> {label}
-            </a>
+            <Link to={path}>
+                <i className={icon}></i> <span>{label}</span>
+            </Link>
         </li>
     )
 };

@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './main/app';
 
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
@@ -10,6 +9,7 @@ import reduxThunk from 'redux-thunk';
 import reduxMulti from 'redux-multi';
 
 import rootReducer from './redux/reducers';
+import Routes from './main/routes';
 
 const store = createStore(rootReducer, composeWithDevTools(
     applyMiddleware(reduxThunk, reduxMulti)
@@ -17,7 +17,7 @@ const store = createStore(rootReducer, composeWithDevTools(
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <Routes />
     </Provider>, 
     document.getElementById('app')
 )
