@@ -1,5 +1,5 @@
-const BASE_URL = 'http://localhost:80/api'
 import axios from 'axios';
+const BASE_URL = 'http://localhost:80/api'
 
 export const GET_SUMMARY = 'GET_SUMMARY';
 export const getSummary = () => {

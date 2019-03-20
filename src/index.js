@@ -1,3 +1,5 @@
+import * as serviceWorker from './serviceWorker';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -9,7 +11,7 @@ import reduxThunk from 'redux-thunk';
 import reduxMulti from 'redux-multi';
 
 import rootReducer from './redux/reducers';
-import Routes from './main/routes';
+import AuthOrApp from './main/authOrApp';
 
 const store = createStore(rootReducer, composeWithDevTools(
     applyMiddleware(reduxThunk, reduxMulti)
@@ -17,7 +19,9 @@ const store = createStore(rootReducer, composeWithDevTools(
 
 ReactDOM.render(
     <Provider store={store}>
-        <Routes />
+        <AuthOrApp />
     </Provider>, 
     document.getElementById('app')
 )
+
+serviceWorker.unregister();

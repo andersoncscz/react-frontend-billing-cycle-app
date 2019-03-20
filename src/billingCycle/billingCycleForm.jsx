@@ -20,8 +20,8 @@ class BillingCycleForm extends Component {
         return {
             //converte string para numero, ou zero se nao conseguir: +c.value || 0
             //.reduce() -> recebe uma funcao que irá transformar o array de numero em um unico numero, somando-os
-            sumOfCredits: credits.map(c => +c.value || 0).reduce(sum),
-            sumOfDebts: debts.map(d => +d.value || 0).reduce(sum)
+            sumOfCredits: credits.map(c => +c.value || 0).reduce(sum, 0),
+            sumOfDebts: debts.map(d => +d.value || 0).reduce(sum, 0)
         }
     }
 

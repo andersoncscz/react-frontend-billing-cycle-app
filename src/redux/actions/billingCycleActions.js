@@ -1,8 +1,3 @@
-const BASE_URL = 'http://localhost:80/api'
-const INITIAL_VALUES = {
-    credits: [{}], debts: [{}]    
-}
-
 import axios from 'axios';
 
 import { toastr } from 'react-redux-toastr';
@@ -12,6 +7,11 @@ import { selectTab, showTabs } from './tabActions';
 import { TAB_LIST, TAB_CREATE, TAB_UPDATE, TAB_DELETE } from '../../common/tab/constants';
 
 import { BILLING_CYCLE_FORM } from '../../billingCycle/constants';
+
+const BASE_URL = 'http://localhost:80/api'
+const INITIAL_VALUES = {
+    credits: [{}], debts: [{}]    
+}
 
 export const GET_LIST = 'GET_LIST';
 export const getList = () => {
